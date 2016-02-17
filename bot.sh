@@ -46,10 +46,10 @@ killall -9 sleep
 while :
 do
     echo "Downloading chrome user data dir profile..."
-    wget --no-check-certificate https://raw.githubusercontent.com/duclvz/botTE/master/chromeEx.tar.gz -O /root/chromeEx.tar.gz
+    wget --no-check-certificate https://raw.githubusercontent.com/duclvz/botTE/master/chromeBotTE.tar.gz -O /root/chromeBotTE.tar.gz
     echo "Recreating/extracting chrome user data dir..."
     rm -fr /root/chromeBotTE/
-    tar -xf /root/chromeEx.tar.gz -C /root/
+    tar -xf /root/chromeBotTE.tar.gz -C /root/
     echo "Starting virtual X display..."
     Xvfb :1 -screen 1 1024x768x16 -nolisten tcp & disown
     echo "Starting chrome TE viewer..."
